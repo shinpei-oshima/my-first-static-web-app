@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/staticwebapp.config.json" ,
+  "auth": {
+    "identityProviders": {
+      "customOpenIdConnectProviders": {
+        "b2c": {
+          "registration": {
+            "clientIdSettingName": "B2C_ClientID",
+            "clientCredential": {
+              "clientSecretSettingName": "B2C_Client_Secret"
+          },
+          "login": {
+            "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+            "scopes": ["openid", "profile"]
+          }
+        }
+      }
+    }
+  },
+  "routes": [
+    {
+      "route": "/*",
+      "allowedRoles": ["authenticated"]
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/.auth/login/b2c",
+      "statusCode": 302
+    }
+  }
+}
