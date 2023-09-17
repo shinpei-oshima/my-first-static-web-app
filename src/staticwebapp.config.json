@@ -33,4 +33,11 @@
       "statusCode": 302
     }
   }
+  {
+    "forwardingGateway": {
+        "allowedForwardedHosts": [
+            "swaapgw.japaneast.cloudapp.azure.com"
+        ]
+    }
+}
 }
