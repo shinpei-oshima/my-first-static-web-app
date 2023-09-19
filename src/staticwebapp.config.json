@@ -26,11 +26,13 @@
       "route": "/*",
       "allowedRoles": ["authenticated"]
     },
-    "forwardingGateway": {
-      "allowedForwardedHosts": [
+    {
+      "forwardingGateway": {
+        "allowedForwardedHosts": [
           "swaapgw.japaneast.cloudapp.azure.com"
         ]
       }
+    }
   ],
   "responseOverrides": {
     "401": {
