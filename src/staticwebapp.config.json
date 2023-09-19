@@ -25,13 +25,6 @@
     {
       "route": "/*",
       "allowedRoles": ["authenticated"]
-    },
-    {
-      "forwardingGateway": {
-        "allowedForwardedHosts": [
-          "swaapgw.japaneast.cloudapp.azure.com"
-        ]
-      }
     }
   ],
   "responseOverrides": {
@@ -39,5 +32,10 @@
       "redirect": "/.auth/login/b2c",
       "statusCode": 302
     }
-  }    
+  },
+      "forwardingGateway": {
+        "allowedForwardedHosts": [
+          "swaapgw.japaneast.cloudapp.azure.com"
+        ]
+      }
 }
