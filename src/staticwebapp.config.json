@@ -31,8 +31,8 @@
         "allowedForwardedHosts": [
             "swaapgw.japaneast.cloudapp.azure.com"
         ]
+      }
     }
-}
   ],
   "responseOverrides": {
     "401": {
@@ -40,4 +40,11 @@
       "statusCode": 302
     }
   }
+      {    
+      "forwardingGateway": {
+        "allowedForwardedHosts": [
+            "swaapgw.japaneast.cloudapp.azure.com"
+        ]
+      }
+    }
 }
